@@ -1,16 +1,16 @@
 import React,{useState, useEffect} from 'react';
-import ListBooks from '../../components/Books/Books'
+import Books from '../../components/Books/Books'
 import axios from 'axios';
 
-const PagesPromotionlist = () => {
+const PagesListBooks = () => {
  
-    const [promotions, setPromotions] =  useState([]);
+    const [listbooks, setbooks] =  useState([]);
 
     useEffect(() => {
-      axios.get('http://localhost:5000/promotions?_embed=comments')
+      axios.get(' http://localhost:5000/books')
       .then((response) => {
         console.log(response.data);
-        setPromotions(response.data);
+        setbooks(response.data);
 
       }
       );
@@ -21,8 +21,8 @@ const PagesPromotionlist = () => {
      return(
         
         <>
-          {promotions.map((promotion) =>(
-            <listBooks promotion={promotion} key={promotion.id}/>
+          {listbooks.map((books) =>(
+            <Books books={books} key={books.id}/>
            ) )}
             
         </>
@@ -30,7 +30,7 @@ const PagesPromotionlist = () => {
 }
 
 
-export default ListBooks;
+export default PagesListBooks;
 
 
 

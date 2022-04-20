@@ -5,14 +5,16 @@ import styled from 'styled-components';
 
 const ItemContainer = styled.div`
  border-radius: 4px;
- background-color: #fff;
- height: 120px;
- width: 262px;
+ background-color: #ccc;
+height: 120px;
+width: 262px;
  color:#29303b;
  margin-botton: 10px;
  margin-right: 10px;
  padding: 10px;
+ display: inline-block;
  `;
+ 
 const TitlePlane = styled.div`
 font-weight: 700;
 margin-bottom: 5px;
@@ -20,6 +22,7 @@ margin-bottom: 5px;
 
  const ItemLink = styled.a`
    text-decoration:none;
+   
  `;
  const PricePane = styled.div`
  margin-bottom: 5px;
@@ -35,7 +38,7 @@ margin-bottom: 5px;
 
 
 
-const ListBooks = ({books}) => {
+const Books = ({books}) => {
     return (
       <ItemLink href={books.url} title= "clique para comprar">
           <ItemContainer>
@@ -48,5 +51,5 @@ const ListBooks = ({books}) => {
     )
   }
   
-  export default ListBooks;
+  export default Books;
   
