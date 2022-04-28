@@ -6,13 +6,13 @@ import {
   Route,
 } from "react-router-dom";
 
-import PagesListBooks from "../Page/List/ListBooks";
+import BooksPromotionSearch from "../Page/Search/Search";
 
 const Root = () => {
     return(
         <Router>
            <Routes>
-              <Route  path="/" element={<PagesListBooks/>} />          
+              <Route  path="/" element={<BooksPromotionSearch/>} />          
            </Routes>        
         </Router>
 

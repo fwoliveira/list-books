@@ -9,7 +9,6 @@ const PagesListBooks = () => {
     useEffect(() => {
       axios.get(' http://localhost:5000/books')
       .then((response) => {
-        console.log(response.data);
         setbooks(response.data);
 
       }

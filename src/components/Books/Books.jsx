@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 
 const ItemContainer = styled.div`
+aling-items: center;
  border-radius: 4px;
  background-color: #ccc;
 height: 120px;
