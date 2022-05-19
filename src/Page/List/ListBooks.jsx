@@ -1,13 +1,13 @@
 import React,{useState, useEffect} from 'react';
 import Books from '../../components/Books/Books'
-import axios from 'axios';
+import api from '../../service/Api';
 
 const PagesListBooks = () => {
  
     const [listbooks, setbooks] =  useState([]);
 
     useEffect(() => {
-      axios.get(' http://localhost:5000/books')
+      api.get('/books')
       .then((response) => {
         setbooks(response.data);
 

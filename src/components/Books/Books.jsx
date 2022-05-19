@@ -1,20 +1,21 @@
 import React from 'react';
 import {Button} from 'react-bootstrap';
 import styled from 'styled-components';
-
+import UIButton from '../UI/Button/Button'
+import {Link} from "react-router-dom";
 
 const ItemContainer = styled.div`
-aling-items: center;
+ aling-items: center;
  border-radius: 4px;
  background-color: #ccc;
-height: 120px;
-width: 262px;
+ height: 120px;
+ width: 262px;
  color:#29303b;
- margin-botton: 10px;
+ margin-botton: 40px;
  margin-right: 10px;
  padding: 10px;
  display: inline-block;
- `;
+  mar`;
  
 const TitlePlane = styled.div`
 font-weight: 700;
@@ -46,7 +47,8 @@ const Books = ({books}) => {
            <Thumbnail src={books.image}></Thumbnail>
            <TitlePlane>{books.title}</TitlePlane>
            <PricePane> R$ {books.price}</PricePane>
-           <Button variant="primary">Comprar</Button>
+           <UIButton component="a" >Comprar</UIButton>
+           <UIButton component={Link} to={`/edit/${books.id}`} >editar</UIButton>
           </ItemContainer>
       </ItemLink>
     )

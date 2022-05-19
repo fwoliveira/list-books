@@ -3,6 +3,7 @@ import searchCss from './Search.module.css';
 import axios from 'axios';
 import Books from '../Books/Books';
 import { Link } from "react-router-dom";
+import UIButton from "../UI/Button/Button";
 
 
 const PromotionSearch = () => { 
@@ -27,7 +28,7 @@ const PromotionSearch = () => {
          <>
          <header className={searchCss.PromotionSearchHeader}>
            <h1> Promoção de livros</h1>
-           <Link to= "/create">Novo livro</Link>
+           <UIButton to= "/create" component={Link}>Novo livro</UIButton>
          </header>
          <input type="search"
          className={searchCss.BooksSearchInput} 
