@@ -1,47 +1,51 @@
 import React, {useEffect, useState} from "react";
 import searchCss from './Search.module.css';
-import axios from 'axios';
+import api from '../../service/Api';
 import Books from '../Books/Books';
 import { Link } from "react-router-dom";
 import UIButton from "../UI/Button/Button";
 
 
 const PromotionSearch = () => { 
-        const [books, setbooks] =  useState([]);
-        const[ search, setSearch] = useState('');
-    
-        useEffect(() => {
-          const params = {};
-          if (search) {
-            params.title_like = search;
-          }
+  const [books, setbooks] =  useState([]);
+  const[ search, setSearch] = useState('');
 
-          axios.get('http://localhost:5000/books', { params })
-          .then((response) => {
-            console.log(response.data);
-            setbooks(response.data);
-    
-          }
-          );
-         }, [search])
-          return (
-         <>
-         <header className={searchCss.PromotionSearchHeader}>
-           <h1> Promoção de livros</h1>
-           <UIButton to= "/create" component={Link}>Novo livro</UIButton>
-         </header>
-         <input type="search"
-         className={searchCss.BooksSearchInput} 
-         placeholder="Busca"
-         value={search}
-         onChange={(ev) => setSearch(ev.target.value)}
-         />
-          {books.map((books) =>(
-            <Books books={books} key={books.id}/>
-           ) )}  
-         </>
-    );
+
+   useEffect(() => {
+     const params = {};
+     if (search) {
+       params.title_like = search;}
+       
+       const getSeach = async () => {
+         try {
+           const books = await api.get('/books?_order=desc&_sort=id', {params} ) 
+           setbooks(books.data);
+          } catch (error){
+            console.log(error);
+          }}
+          getSeach();
+
+   }, [search])
+
+    return (
+   <>
+   <header className={searchCss.PromotionSearchHeader}>
+     <h1>Livros</h1>
+     <UIButton to= "/create"  component={Link}>Nova promoção</UIButton>
+   </header>
+   <input type="search"
+   className={searchCss.BooksSearchInput} 
+   placeholder="Busca"
+   value={search}
+   onChange={(ev) => setSearch(ev.target.value)}
+   />
+    {books.map((books) =>(
+      <Books books={books} key={books.id}/>
+     ) )}  
+   </>
+);
 
 };
 
 export default PromotionSearch;
+

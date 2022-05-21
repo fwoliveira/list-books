@@ -13,9 +13,8 @@ const ItemContainer = styled.div`
  color:#29303b;
  margin-botton: 40px;
  margin-right: 10px;
- padding: 10px;
  display: inline-block;
-  mar`;
+ margin-top: 20px;`;
  
 const TitlePlane = styled.div`
 font-weight: 700;
@@ -28,6 +27,7 @@ margin-bottom: 5px;
  `;
  const PricePane = styled.div`
  margin-bottom: 5px;
+ color: #0e96f0;
  `;
  const Thumbnail = styled.img`
  width: auto;

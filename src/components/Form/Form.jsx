@@ -5,8 +5,9 @@ import { useNavigate, Link } from 'react-router-dom';
 import UIButton from '../UI/Button/Button';
 
 const initialValue = {
+    id: 0,
     title: '',
-    imageUrl:'',
+    image:'',
     url: '',
     price: 0,
 }
@@ -59,8 +60,8 @@ const BooksForm = ({id}) => {
                 </div>
 
                 <div className={FormCss.BooksFormGroup}>
-                <label htmlFor="title">Url Image</label>
-                <input type="text" id="imageUrl" name="imageUrl" value={values.imageUrl} onChange={onChange} />
+                <label htmlFor="title">Image</label>
+                <input type="text" id="image" name="image" value={values.image} onChange={onChange} />
                 </div>
 
                 <div className={FormCss.BooksFormGroup}>
@@ -80,7 +81,6 @@ const BooksForm = ({id}) => {
                     <UIButton
                     to="/"
                     component={Link}
-                    theme="border-warning"
                     >
                         Voltar
                     </UIButton>
