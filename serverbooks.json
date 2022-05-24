@@ -2,45 +2,17 @@
   "books": [
     {
       "id": 1,
-      "title": "Programação Web com Node.js",
-      "image": "https://m.media-amazon.com/images/I/4110e7iseFL.jpg",
-      "price": 14.99,
-      "url": "https://www.luiztools.com.br/livro-node-amazon"
+      "title": "O poder do hábito",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51Xby92J9KL._SX346_BO1,204,203,200_.jpg",
+      "url": "https://www.amazon.com.br/poder-do-hábito-Charles-Duhigg/dp/8539004119/ref=asc_df_8539004119/?tag=googleshopp00-20&linkCode=df0&hvadid=379749006424&hvpos=&hvnetw=g&hvrand=553727142933490994&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001729&hvtargid=pla-333762635690&psc=1",
+      "price": "40"
     },
     {
       "id": 2,
-      "title": "Node.js e Microservices",
-      "image": "https://m.media-amazon.com/images/I/41CUCsnLPML.jpg",
-      "price": 14.99,
-      "url": "https://www.luiztools.com.br/livro-node-ii-amazon"
-    },
-    {
-      "id": 3,
-      "title": "MongoDB para Iniciantes",
-      "image": "https://m.media-amazon.com/images/I/31NR3RRS3VL.jpg",
-      "price": 11.99,
-      "url": "https://www.luiztools.com.br/livro-mongodb-amazon"
-    },
-    {
-      "id": 4,
       "title": "A arte da guerra",
       "image": "https://images-na.ssl-images-amazon.com/images/I/51KvntpPRpL._SX331_BO1,204,203,200_.jpg",
-      "url": "https://www.amazon.com.br/arte-guerra-Sun-Tzu/dp/8594318596/ref=asc_df_8594318596/?tag=googleshopp00-20&linkCode=df0&hvadid=379748610448&hvpos=&hvnetw=g&hvrand=13604171834544200066&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001729&hvtargid=pla-811770779218&psc=1",
-      "price": "10.00"
-    },
-    {
-      "id": 5,
-      "title": "Livro- Mindset",
-      "image": "https://http2.mlstatic.com/D_NQ_NP_805503-MLB47144333323_082021-O.webp",
-      "url": "https://www.bmmagazine.com.br/MLB-1718008237-livro-mindset-a-nova-psicologia-do-sucesso-envio-imediato-_JM?utm_source=google&utm_medium=cpc&utm_campaign=darwin_ss",
-      "price": "41.00"
-    },
-    {
-      "id": 6,
-      "title": "Código limpo",
-      "image": "https://images-na.ssl-images-amazon.com/images/I/41aHzYSXZkL._SX380_BO1,204,203,200_.jpg",
-      "url": "https://www.amazon.com.br/Código-limpo-Robert-C-Martin/dp/8576082675/ref=asc_df_8576082675/?tag=googleshopp00-20&linkCode=df0&hvadid=379792215563&hvpos=&hvnetw=g&hvrand=13604171834544200066&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001729&hvtargid=pla-398225630878&psc=1",
-      "price": "60.00"
+      "url": "https://www.amazon.com.br/arte-guerra-Sun-Tzu/dp/8594318596/ref=asc_df_8594318596/?tag=googleshopp00-20&linkCode=df0&hvadid=379748610448&hvpos=&hvnetw=g&hvrand=553727142933490994&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001729&hvtargid=pla-811770779218&psc=1",
+      "price": "20"
     }
   ]
 }

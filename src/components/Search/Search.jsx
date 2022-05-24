@@ -9,6 +9,7 @@ import UIButton from "../UI/Button/Button";
 const PromotionSearch = () => { 
   const [books, setbooks] =  useState([]);
   const[ search, setSearch] = useState('');
+  const[onDelete, setonDelete] = useState(null);
 
 
    useEffect(() => {
@@ -25,7 +26,14 @@ const PromotionSearch = () => {
           }}
           getSeach();
 
-   }, [search])
+   }, [search,onDelete])
+   const handDelete = async (id) => {
+    try{
+     await api.delete(`/books/${id}`);
+     setonDelete(id);
+    }catch (error){
+      console.log(error);
+    }}
 
     return (
    <>
@@ -40,7 +48,7 @@ const PromotionSearch = () => {
    onChange={(ev) => setSearch(ev.target.value)}
    />
     {books.map((books) =>(
-      <Books books={books} key={books.id}/>
+      <Books books={books} key={books.id} onClickDeleted={()=> handDelete(books.id)}/>
      ) )}  
    </>
 );

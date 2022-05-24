@@ -3,52 +3,66 @@ import {Button} from 'react-bootstrap';
 import styled from 'styled-components';
 import UIButton from '../UI/Button/Button'
 import {Link} from "react-router-dom";
+import { Trash } from 'phosphor-react';
 
-const ItemContainer = styled.div`
- aling-items: center;
- border-radius: 4px;
- background-color: #ccc;
- height: 120px;
- width: 262px;
- color:#29303b;
- margin-botton: 40px;
- margin-right: 10px;
- display: inline-block;
- margin-top: 20px;`;
- 
+const ItemContainer =  styled.div`
+    align-items: center;
+    border-radius: 4px;
+    background-color: #ccc;
+    height: 140px;
+    width: 350px;
+    color: #29303b;
+    margin-bottom: 4px;
+    margin-right: 8px;
+    margin-left: 8px;
+    padding: 6px;
+    flex-direction: column;
+    display: inline-block;
+    position: relative;`;
+
+
 const TitlePlane = styled.div`
-font-weight: 700;
-margin-bottom: 5px;
-`;
+     font-weight: bold;
+     margin-bottom: 5px;`;
 
- const ItemLink = styled.a`
-   text-decoration:none;
-   
+
+const ItemLink = styled.a`
+    text-decoration:none;`;
+
+
+const PricePane = styled.div`
+    margin-bottom:5px;`;
+
+
+const Thumbnail = styled.img`
+     width:auto;
+     height:100%;
+     border:0;
+     vertical-align: middle;
+     float: left;
+     margin-right: 10px;`;
+ const ButtonDelet = styled.button`
+  border: unset;
+  background-color: unset;
+  position: absolute;
+  top: 5px;
+  right: 10px;
  `;
- const PricePane = styled.div`
- margin-bottom: 5px;
- color: #0e96f0;
- `;
- const Thumbnail = styled.img`
- width: auto;
- height: 100%;
- border: 0;
- vertical-align: middle;
- float: left;
- margin-right: 10px;
- `;
 
 
 
-const Books = ({books}) => {
+const Books = ({books,onClickDeleted}) => {
     return (
-      <ItemLink href={books.url} title= "clique para comprar">
+      <ItemLink>
           <ItemContainer>
            <Thumbnail src={books.image}></Thumbnail>
            <TitlePlane>{books.title}</TitlePlane>
            <PricePane> R$ {books.price}</PricePane>
-           <UIButton component="a" >Comprar</UIButton>
-           <UIButton component={Link} to={`/edit/${books.id}`} >editar</UIButton>
+           <UIButton component="a"  href={books.url} title= "clique para comprar">Comprar</UIButton>
+           <UIButton component={Link}  to={`/edit/${books.id}`} >editar</UIButton>
+           <ButtonDelet type="button" onClick={onClickDeleted}>
+          <Trash size={20} color="#bf1d1d" weight="thin" />
+          </ButtonDelet>
           </ItemContainer>
       </ItemLink>
     )
